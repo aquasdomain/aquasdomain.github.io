@@ -21,11 +21,20 @@
             background-color: #f5f0e1; /* Coffee cream background */
             color: #4b3832; /* Coffee brown text */
             overflow-x: hidden;
+            position: relative;
         }
-
         h1, h2 {
             font-family: 'Dancing Script', cursive;
             margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            max-width: 800px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         /* Header (Transparent Navbar) */
@@ -82,6 +91,7 @@
             height: 100vh;
             padding: 40px;
             text-align: center;
+            position: relative;
         }
         section h2 {
             margin-bottom: 30px; /* Extra space below section title */
@@ -91,35 +101,29 @@
 
         /* About Section */
         #about {
+            background: #f5f0e1; /* Coffee cream background */
             display: grid;
-            grid-template-rows: auto 1fr; /* Two rows: title and content */
-            grid-template-columns: 1fr 1fr; /* Two columns for content */
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            justify-items: center;
-            gap: 20px;
+            gap: 269px;
             padding: 40px;
             height: 100vh;
-            background: #f5f0e1; /* Coffee cream background */
         }
-
-        #about h2 {
-            grid-column: span 2; /* Make the title span both columns */
-            text-align: center;
-            font-size: 2.5em;
-        }
-
         #about .text-content {
             display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            text-align: left; /* Align text to the left */
-            max-width: 500px;
+            flex-direction: column;
+            justify-content: center; /* Vertically center the text */
+            align-items: flex-start; /* Align text to the left */
+            text-align: left;
+            padding-left: 269px; /* Left-align the text */
         }
-
+        #about .text-content p {
+            text-align: left; /* Ensure the description is left aligned */
+        }
         #about img {
-            max-width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 469px;
+            border-radius: 69px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         /* Portfolio Section */
@@ -191,15 +195,13 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
         <div class="text-content">
+            <h2>About Me</h2>
             <p>
-                Hello! I am John Doe, a web developer specializing in front-end and back-end development. 
-                I have a passion for creating modern and responsive web applications that bring ideas to life. 
-                With a strong focus on user experience and performance, I deliver high-quality digital solutions.
+                Hi, I’m Rodela! 💖 I’m 19, a college student, and the creator behind Aqua’s Domain on YouTube. I love learning new things (like making my own portfolio with HTML 🌸) and use Notion to plan my projects and videos. Big fan of dark chocolate 🍫 and anime 🎀—they’re my go-to after study time. Still a newbie, so yoroshiku! 😊
             </p>
         </div>
-        <img src="your-photo.jpg" alt="John Doe Photo">
+        <img src="https://media.discordapp.net/attachments/1181861786031497236/1315244920478629898/5f52a2326fdbca9aec4cae2302f0b2e3.jpg?ex=6756b4c9&is=67556349&hm=706350ba8bc3afecfcfe31e4135b7e81cd215a17fa0c0a277efaa36961e3d228&=&format=webp&width=662&height=662" alt="Aquas Photo">
     </section>
 
     <!-- Portfolio Section -->
@@ -217,15 +219,17 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="social-icons">
-            <a href="https://linkedin.com/in/johndoe" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/johndoe" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:johndoe@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://youtube.com/@aquasdomain?si=Ht_X0nU2z_ort16t" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/aquasdomain/profilecard/?igsh=djhrNzN2bHZhcnQy" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/share/1E81NJm281/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/aquasdomain" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:rodelaislamrisana@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+        <p>&copy; 2024 aquasdomain. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
