@@ -1,235 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <!-- Font Awesome for Social Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f0e1; /* Coffee cream background */
-            color: #4b3832; /* Coffee brown text */
-            overflow-x: hidden;
-            position: relative;
-        }
-        h1, h2 {
-            font-family: 'Dancing Script', cursive;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            max-width: 800px;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Header (Transparent Navbar) */
-        header {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.9); /* Transparent white background */
-            padding: 10px 30px;
-            border-radius: 50px; /* Rounded circular effect */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px); /* Subtle blur effect */
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        nav ul li a {
-            font-weight: bold;
-            font-size: 1em;
-            color: #4b3832; /* Coffee brown text */
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #d4a373; /* Coffee light highlight */
-        }
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #d4a373;
-            left: 50%;
-            bottom: -5px;
-            transition: width 0.3s ease, left 0.3s ease;
-        }
-        nav ul li a:hover::after {
-            width: 100%;
-            left: 0;
-        }
-
-        /* Sections */
-        section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-        }
-        section h2 {
-            margin-bottom: 30px; /* Extra space below section title */
-            font-size: 2.2em;
-            text-align: center; /* Center the section title */
-        }
-
-        /* About Section */
-        #about {
-            background: #f5f0e1; /* Coffee cream background */
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 269px;
-            padding: 40px;
-            height: 100vh;
-        }
-        #about .text-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Vertically center the text */
-            align-items: flex-start; /* Align text to the left */
-            text-align: left;
-            padding-left: 269px; /* Left-align the text */
-        }
-        #about .text-content p {
-            text-align: left; /* Ensure the description is left aligned */
-        }
-        #about img {
-            max-width: 469px;
-            border-radius: 69px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Portfolio Section */
-        #portfolio {
-            background: #4b3832; /* Coffee brown */
-            color: #fff;
-            padding: 60px 40px;
-        }
-        #portfolio .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            width: 100%;
-        }
-        #portfolio .portfolio-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        #portfolio .portfolio-grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Contact Section */
-        #contact {
-            background: #d4a373; /* Coffee light highlight */
-            color: #fff;
-            padding: 60px 40px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: #fff;
-            font-size: 1.5em;
-            transition: all 0.3s ease;
-            padding: 5px;
-            border-radius: 50%;
-        }
-        .social-icons a:hover {
-            color: #3b2a25; /* Dark chocolate */
-            background: rgba(255, 255, 255, 0.7); /* Light shadow background */
-        }
-
-        /* Footer */
-        footer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 80px;
-            background: #4b3832; /* Coffee brown */
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawaii Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+  <div class="loader-wrapper">
+    <div class="loader">
+      <span>🌸</span>
+      <span>🎀</span>
+      <span>🌸</span>
+    </div>
+    <p>Loading...</p>
+  </div>
+
+  <main class="content">
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="intro-container">
+        <img src="https://media.discordapp.net/attachments/1181861786031497236/1325162357865054260/IMG_2775.JPG?ex=677ac91e&is=6779779e&hm=ef293db2e0392e680d35180c01995a248836879049176e2678ba0c1b66310130&=&format=webp&width=670&height=670" alt="Profile Picture" class="profile-pic">
+        <div>
+          <h1>Hi, I'm Rodela! 🌸</h1>
+          <p>A creative girl who loves anime, coding, and all things cute!</p>
+        </div>
+      </div>
     </header>
-
-    <!-- About Section -->
     <section id="about">
-        <div class="text-content">
-            <h2>About Me</h2>
-            <p>
-                Hi, I’m Rodela! 💖 I’m 19, a college student, and the creator behind Aqua’s Domain on YouTube. I love learning new things (like making my own portfolio with HTML 🌸) and use Notion to plan my projects and videos. Big fan of dark chocolate 🍫 and anime 🎀—they’re my go-to after study time. Still a newbie, so yoroshiku! 😊
-            </p>
-        </div>
-        <img src="<a href="https://ibb.co.com/z7MnV0r"><img src="https://i.ibb.co.com/CMc1KTz/IMG-2778-1.jpg" alt="IMG-2778-1" border="0"></a><br /><a target='_blank' href='https://dedupelist.com/'>combo duplicate remover</a><br />">
+      <h2>About Me</h2>
+      <p>I'm a college student passionate about learning new skills and creating engaging content on my YouTube channel, Aqua's Domain!</p>
     </section>
-
-    <!-- Portfolio Section -->
     <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <div class="portfolio-grid">
-            <img src="project1.jpg" alt="Project 1">
-            <img src="project2.jpg" alt="Project 2">
-            <img src="project3.jpg" alt="Project 3">
-            <img src="project4.jpg" alt="Project 4">
-        </div>
+      <h2>My Works</h2>
+      <ul>
+        <li>🌸 Custom HTML Portfolio</li>
+        <li>🎥 YouTube Videos</li>
+        <li>✨ Notion Templates</li>
+      </ul>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="social-icons">
-            <a href="https://youtube.com/@aquasdomain?si=Ht_X0nU2z_ort16t" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://instagram.com/aquasdomain/profilecard/?igsh=djhrNzN2bHZhcnQy" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/share/1E81NJm281/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/aquasdomain" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:rodelaislamrisana@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 aquasdomain. All Rights Reserved.</p>
+      <p>Made with 💖 by Rodela</p>
     </footer>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
